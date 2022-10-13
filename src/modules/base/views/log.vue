@@ -52,10 +52,8 @@ const Table = useTable({
 		{ type: "selection" },
 		{ label: "ID", prop: "id" },
 		{ label: "IP", prop: "ip" },
-		{ label: "url", prop: "url", component: { name: "cl-link" } },
-		{ label: "headers", prop: "headers" },
-		{ label: "创建时间", prop: "createTime" },
-		{ label: "更新时间", prop: "updateTime" },
+		{ label: "url", prop: "url" },
+		{ label: "访问时间", prop: "createTime" },
 		{ type: "op", buttons: ["delete"] }
 	]
 });
