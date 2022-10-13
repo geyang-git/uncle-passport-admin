@@ -1,136 +1,72 @@
 <template>
 	<cl-crud ref="Crud">
 		<el-row>
+			<!-- 刷新按钮 -->
 			<cl-refresh-btn />
 
-			<el-button
-				v-permission="service.base.sys.log.permission.clear"
-				type="danger"
-				@click="clear"
-			>
-				清空
-			</el-button>
-
-			<cl-filter label="日志保存天数">
-				<el-input-number
-					v-model="day"
-					controls-position="right"
-					:max="10000"
-					:min="1"
-					@change="saveDay"
-				/>
-			</cl-filter>
-
+			<!-- 删除按钮 -->
+			<cl-multi-delete-btn />
 			<cl-flex1 />
-			<cl-search-key placeholder="请求地址、参数、ip" />
+			<!-- 关键字搜索 -->
+			<cl-search-key />
 		</el-row>
 
 		<el-row>
-			<cl-table ref="Table" :default-sort="{ prop: 'createTime', order: 'descending' }" />
+			<!-- 数据表格 -->
+			<cl-table ref="Table" />
 		</el-row>
 
 		<el-row>
 			<cl-flex1 />
+			<!-- 分页控件 -->
 			<cl-pagination />
 		</el-row>
+
+		<!-- 新增、编辑 -->
+		<cl-upsert ref="Upsert" />
 	</cl-crud>
 </template>
 
-<script lang="ts" name="sys-log" setup>
-import { onMounted, ref } from "vue";
-import { ElMessage, ElMessageBox } from "element-plus";
+<script lang="ts" name="log-log" setup>
+import { useCrud, useTable, useUpsert } from "@cool-vue/crud";
 import { useCool } from "/@/cool";
-import { useCrud, useTable } from "@cool-vue/crud";
 
 const { service } = useCool();
 
-// 天数
-const day = ref<number>(1);
-
-// cl-crud 配置
-const Crud = useCrud({ service: service.base.sys.log }, (app) => {
-	app.refresh();
+// cl-upsert 配置
+const Upsert = useUpsert({
+	items: [
+		{ label: "IP", prop: "ip", required: true, component: { name: "el-input" } },
+		{
+			label: "url",
+			prop: "url",
+			component: { name: "cl-upload", props: { listType: "text", limit: 1 } }
+		},
+		{ label: "headers", prop: "headers", component: { name: "el-input" } }
+	]
 });
 
 // cl-table 配置
 const Table = useTable({
-	contextMenu: ["refresh"],
 	columns: [
-		{
-			type: "index",
-			label: "#",
-			width: 60
-		},
-		{
-			prop: "userId",
-			label: "用户ID"
-		},
-		{
-			prop: "name",
-			label: "昵称",
-			minWidth: 150
-		},
-		{
-			prop: "action",
-			label: "请求地址",
-			minWidth: 200,
-			showOverflowTooltip: true
-		},
-		{
-			prop: "params",
-			label: "参数",
-			minWidth: 200,
-			showOverflowTooltip: true
-		},
-		{
-			prop: "ip",
-			label: "ip",
-			minWidth: 150
-		},
-		{
-			prop: "ipAddr",
-			label: "ip地址",
-			minWidth: 150
-		},
-		{
-			prop: "createTime",
-			label: "创建时间",
-			minWidth: 160,
-			sortable: true
-		}
+		{ type: "selection" },
+		{ label: "ID", prop: "id" },
+		{ label: "IP", prop: "ip" },
+		{ label: "url", prop: "url", component: { name: "cl-link" } },
+		{ label: "headers", prop: "headers" },
+		{ label: "创建时间", prop: "createTime" },
+		{ label: "更新时间", prop: "updateTime" },
+		{ type: "op", buttons: ["delete"] }
 	]
 });
 
-// 保存天数
-function saveDay() {
-	service.base.sys.log.setKeep({ value: day.value }).then(() => {
-		ElMessage.success("保存成功");
-	});
-}
-
-// 清空日志
-function clear() {
-	ElMessageBox.confirm("是否要清空日志", "提示", {
-		type: "warning"
-	})
-		.then(() => {
-			service.base.sys.log
-				.clear()
-				.then(() => {
-					ElMessage.success("清空成功");
-					Crud.value?.refresh();
-				})
-				.catch((err) => {
-					ElMessage.error(err.message);
-				});
-		})
-		.catch(() => null);
-}
-
-onMounted(() => {
-	// 获取天数
-	service.base.sys.log.getKeep().then((res: number) => {
-		day.value = Number(res);
-	});
-});
+// cl-crud 配置
+const Crud = useCrud(
+	{
+		service: service.log.log
+	},
+	(app) => {
+		app.refresh();
+	}
+);
 </script>

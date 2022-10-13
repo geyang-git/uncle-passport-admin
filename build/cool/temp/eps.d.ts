@@ -374,6 +374,37 @@ declare namespace Eps {
 		[key: string]: any;
 	}
 
+	interface LogEntity {
+		/**
+		 * ID
+		 */
+		id?: number;
+		/**
+		 * IP
+		 */
+		ip?: string;
+		/**
+		 * url
+		 */
+		url?: string;
+		/**
+		 * headers
+		 */
+		headers?: string;
+		/**
+		 * 创建时间
+		 */
+		createTime?: Date;
+		/**
+		 * 更新时间
+		 */
+		updateTime?: Date;
+		/**
+		 * 任意键值
+		 */
+		[key: string]: any;
+	}
+
 	interface SpaceInfoEntity {
 		/**
 		 * ID
@@ -1416,6 +1447,63 @@ declare namespace Eps {
 		request: Service["request"];
 	}
 
+	interface LogLog {
+		/**
+		 * 删除
+		 */
+		delete(data?: any): Promise<any>;
+		/**
+		 * 单个信息
+		 */
+		info(data?: any): Promise<LogEntity>;
+		/**
+		 * 分页查询
+		 */
+		page(data?: any): Promise<{
+			pagination: { size: number; page: number; total: number };
+			list: LogEntity[];
+			[key: string]: any;
+		}>;
+		/**
+		 * 列表查询
+		 */
+		list(data?: any): Promise<LogEntity[]>;
+		/**
+		 * update
+		 */
+		update(data?: any): Promise<any>;
+		/**
+		 * add
+		 */
+		add(data?: any): Promise<any>;
+		/**
+		 * 权限标识
+		 */
+		permission: {
+			delete: string;
+			info: string;
+			page: string;
+			list: string;
+			update: string;
+			add: string;
+		};
+		/**
+		 * 权限状态
+		 */
+		_permission: {
+			delete: boolean;
+			info: boolean;
+			page: boolean;
+			list: boolean;
+			update: boolean;
+			add: boolean;
+		};
+		/**
+		 * 请求
+		 */
+		request: Service["request"];
+	}
+
 	interface SpaceInfo {
 		/**
 		 * 删除
@@ -1636,6 +1724,7 @@ declare namespace Eps {
 		};
 		demo: { goods: DemoGoods };
 		dict: { info: DictInfo; type: DictType };
+		log: { log: LogLog };
 		space: { info: SpaceInfo; type: SpaceType };
 		task: { info: TaskInfo };
 	};

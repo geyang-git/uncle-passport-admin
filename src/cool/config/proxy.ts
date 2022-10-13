@@ -6,7 +6,7 @@ export const proxy = {
 	},
 
 	"/prod": {
-		target: "https://show.cool-admin.com",
+		target: "https://show.uncle-passport.com",
 		changeOrigin: true,
 		rewrite: (path: string) => path.replace(/^\/prod/, "/api")
 	}
