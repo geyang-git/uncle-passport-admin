@@ -374,6 +374,325 @@ declare namespace Eps {
 		[key: string]: any;
 	}
 
+	interface Form1Entity {
+		/**
+		 * ID
+		 */
+		id?: number;
+		/**
+		 * 姓名
+		 */
+		name?: string;
+		/**
+		 * 电话
+		 */
+		phone?: string;
+		/**
+		 * 邮箱
+		 */
+		email?: string;
+		/**
+		 * 问题或意见
+		 */
+		message?: string;
+		/**
+		 * 状态 0-未处理 1-正在处理 2-已处理
+		 */
+		status?: number;
+		/**
+		 * 备注
+		 */
+		remark?: string;
+		/**
+		 * 创建时间
+		 */
+		createTime?: Date;
+		/**
+		 * 更新时间
+		 */
+		updateTime?: Date;
+		/**
+		 * 任意键值
+		 */
+		[key: string]: any;
+	}
+
+	interface Form2Entity {
+		/**
+		 * ID
+		 */
+		id?: number;
+		/**
+		 * 姓名
+		 */
+		name?: string;
+		/**
+		 * 电话
+		 */
+		phone?: string;
+		/**
+		 * 邮箱
+		 */
+		email?: string;
+		/**
+		 * 性别 0-男 1-女
+		 */
+		gender?: number;
+		/**
+		 * 婚姻状况 0-未婚 1-已婚 2-离异
+		 */
+		marriage?: number;
+		/**
+		 * 有无管理经验 0-无 1-有
+		 */
+		experience?: number;
+		/**
+		 * 资产总值
+		 */
+		assets?: number;
+		/**
+		 * 国籍
+		 */
+		country?: string;
+		/**
+		 * 居住地
+		 */
+		residence?: string;
+		/**
+		 * 提供证明2年管理经验 0-愿意提供 1-不愿意
+		 */
+		proof?: number;
+		/**
+		 * 有无移民律师 0-无 1-有
+		 */
+		lawyer?: number;
+		/**
+		 * 您希望我们如何联系您？ 0-电话 1-邮件 2-传真
+		 */
+		contact?: number;
+		/**
+		 * 您是如何知道我们的 0-谷歌 1-个人推荐 2-顾问推荐
+		 */
+		know?: number;
+		/**
+		 * 问题或意见
+		 */
+		message?: string;
+		/**
+		 * 状态 0-未处理 1-正在处理 2-已处理
+		 */
+		status?: number;
+		/**
+		 * 备注
+		 */
+		remark?: string;
+		/**
+		 * 创建时间
+		 */
+		createTime?: Date;
+		/**
+		 * 更新时间
+		 */
+		updateTime?: Date;
+		/**
+		 * 任意键值
+		 */
+		[key: string]: any;
+	}
+
+	interface Form3Entity {
+		/**
+		 * ID
+		 */
+		id?: number;
+		/**
+		 * 姓名
+		 */
+		name?: string;
+		/**
+		 * 电话
+		 */
+		phone?: string;
+		/**
+		 * 邮箱
+		 */
+		email?: string;
+		/**
+		 * 活动国家
+		 */
+		country?: string;
+		/**
+		 * 目标市场
+		 */
+		market?: string;
+		/**
+		 * 对哪国的移民计划感兴趣？
+		 */
+		interest?: string;
+		/**
+		 * 您的职业 0-律师 1-会计 2-移民顾问 3-金融机构 4-其他
+		 */
+		occupation?: number;
+		/**
+		 * 您希望我们如何联系 0-电话 1-邮件 2-传真
+		 */
+		contact?: number;
+		/**
+		 * 您是如何知道我们的 0-谷歌 1-个人推荐 2-顾问推荐
+		 */
+		know?: number;
+		/**
+		 * 问题或意见
+		 */
+		message?: string;
+		/**
+		 * 状态 0-未处理 1-正在处理 2-已处理
+		 */
+		status?: number;
+		/**
+		 * 备注
+		 */
+		remark?: string;
+		/**
+		 * 创建时间
+		 */
+		createTime?: Date;
+		/**
+		 * 更新时间
+		 */
+		updateTime?: Date;
+		/**
+		 * 任意键值
+		 */
+		[key: string]: any;
+	}
+
+	interface Form4Entity {
+		/**
+		 * ID
+		 */
+		id?: number;
+		/**
+		 * 姓名
+		 */
+		name?: string;
+		/**
+		 * 电话
+		 */
+		phone?: string;
+		/**
+		 * 邮箱
+		 */
+		email?: string;
+		/**
+		 * 国籍
+		 */
+		country?: string;
+		/**
+		 * 工作部门
+		 */
+		department?: string;
+		/**
+		 * 职位
+		 */
+		position?: string;
+		/**
+		 * 您希望我们如何联系 0-电话 1-邮件 2-传真
+		 */
+		contact?: number;
+		/**
+		 * 问题或意见
+		 */
+		message?: string;
+		/**
+		 * 状态 0-未处理 1-正在处理 2-已处理
+		 */
+		status?: number;
+		/**
+		 * 备注
+		 */
+		remark?: string;
+		/**
+		 * 创建时间
+		 */
+		createTime?: Date;
+		/**
+		 * 更新时间
+		 */
+		updateTime?: Date;
+		/**
+		 * 任意键值
+		 */
+		[key: string]: any;
+	}
+
+	interface Form5Entity {
+		/**
+		 * ID
+		 */
+		id?: number;
+		/**
+		 * 姓名
+		 */
+		name?: string;
+		/**
+		 * 电话
+		 */
+		phone?: string;
+		/**
+		 * 邮箱
+		 */
+		email?: string;
+		/**
+		 * 媒体组织
+		 */
+		media?: string;
+		/**
+		 * 工作部门
+		 */
+		department?: string;
+		/**
+		 * 职位
+		 */
+		position?: string;
+		/**
+		 * 居住国
+		 */
+		country?: string;
+		/**
+		 * 网站
+		 */
+		website?: string;
+		/**
+		 * 您希望我们如何联系 0-电话 1-邮件 2-传真
+		 */
+		contact?: number;
+		/**
+		 * 问题或意见
+		 */
+		message?: string;
+		/**
+		 * 状态 0-未处理 1-正在处理 2-已处理
+		 */
+		status?: number;
+		/**
+		 * 备注
+		 */
+		remark?: string;
+		/**
+		 * 创建时间
+		 */
+		createTime?: Date;
+		/**
+		 * 更新时间
+		 */
+		updateTime?: Date;
+		/**
+		 * 任意键值
+		 */
+		[key: string]: any;
+	}
+
 	interface LogEntity {
 		/**
 		 * ID
@@ -390,7 +709,7 @@ declare namespace Eps {
 		/**
 		 * headers
 		 */
-		headers?: string;
+		headers?: longtext;
 		/**
 		 * 创建时间
 		 */
@@ -1699,6 +2018,291 @@ declare namespace Eps {
 		request: Service["request"];
 	}
 
+	interface FormForm1 {
+		/**
+		 * 删除
+		 */
+		delete(data?: any): Promise<any>;
+		/**
+		 * 修改
+		 */
+		update(data?: any): Promise<any>;
+		/**
+		 * 单个信息
+		 */
+		info(data?: any): Promise<Form1Entity>;
+		/**
+		 * 分页查询
+		 */
+		page(data?: any): Promise<{
+			pagination: { size: number; page: number; total: number };
+			list: Form1Entity[];
+			[key: string]: any;
+		}>;
+		/**
+		 * 列表查询
+		 */
+		list(data?: any): Promise<Form1Entity[]>;
+		/**
+		 * 新增
+		 */
+		add(data?: any): Promise<any>;
+		/**
+		 * 权限标识
+		 */
+		permission: {
+			delete: string;
+			update: string;
+			info: string;
+			page: string;
+			list: string;
+			add: string;
+		};
+		/**
+		 * 权限状态
+		 */
+		_permission: {
+			delete: boolean;
+			update: boolean;
+			info: boolean;
+			page: boolean;
+			list: boolean;
+			add: boolean;
+		};
+		/**
+		 * 请求
+		 */
+		request: Service["request"];
+	}
+
+	interface FormForm2 {
+		/**
+		 * 删除
+		 */
+		delete(data?: any): Promise<any>;
+		/**
+		 * 修改
+		 */
+		update(data?: any): Promise<any>;
+		/**
+		 * 单个信息
+		 */
+		info(data?: any): Promise<Form2Entity>;
+		/**
+		 * 分页查询
+		 */
+		page(data?: any): Promise<{
+			pagination: { size: number; page: number; total: number };
+			list: Form2Entity[];
+			[key: string]: any;
+		}>;
+		/**
+		 * 列表查询
+		 */
+		list(data?: any): Promise<Form2Entity[]>;
+		/**
+		 * 新增
+		 */
+		add(data?: any): Promise<any>;
+		/**
+		 * 权限标识
+		 */
+		permission: {
+			delete: string;
+			update: string;
+			info: string;
+			page: string;
+			list: string;
+			add: string;
+		};
+		/**
+		 * 权限状态
+		 */
+		_permission: {
+			delete: boolean;
+			update: boolean;
+			info: boolean;
+			page: boolean;
+			list: boolean;
+			add: boolean;
+		};
+		/**
+		 * 请求
+		 */
+		request: Service["request"];
+	}
+
+	interface FormForm3 {
+		/**
+		 * 删除
+		 */
+		delete(data?: any): Promise<any>;
+		/**
+		 * 修改
+		 */
+		update(data?: any): Promise<any>;
+		/**
+		 * 单个信息
+		 */
+		info(data?: any): Promise<Form3Entity>;
+		/**
+		 * 分页查询
+		 */
+		page(data?: any): Promise<{
+			pagination: { size: number; page: number; total: number };
+			list: Form3Entity[];
+			[key: string]: any;
+		}>;
+		/**
+		 * 列表查询
+		 */
+		list(data?: any): Promise<Form3Entity[]>;
+		/**
+		 * 新增
+		 */
+		add(data?: any): Promise<any>;
+		/**
+		 * 权限标识
+		 */
+		permission: {
+			delete: string;
+			update: string;
+			info: string;
+			page: string;
+			list: string;
+			add: string;
+		};
+		/**
+		 * 权限状态
+		 */
+		_permission: {
+			delete: boolean;
+			update: boolean;
+			info: boolean;
+			page: boolean;
+			list: boolean;
+			add: boolean;
+		};
+		/**
+		 * 请求
+		 */
+		request: Service["request"];
+	}
+
+	interface FormForm4 {
+		/**
+		 * 删除
+		 */
+		delete(data?: any): Promise<any>;
+		/**
+		 * 修改
+		 */
+		update(data?: any): Promise<any>;
+		/**
+		 * 单个信息
+		 */
+		info(data?: any): Promise<Form4Entity>;
+		/**
+		 * 分页查询
+		 */
+		page(data?: any): Promise<{
+			pagination: { size: number; page: number; total: number };
+			list: Form4Entity[];
+			[key: string]: any;
+		}>;
+		/**
+		 * 列表查询
+		 */
+		list(data?: any): Promise<Form4Entity[]>;
+		/**
+		 * 新增
+		 */
+		add(data?: any): Promise<any>;
+		/**
+		 * 权限标识
+		 */
+		permission: {
+			delete: string;
+			update: string;
+			info: string;
+			page: string;
+			list: string;
+			add: string;
+		};
+		/**
+		 * 权限状态
+		 */
+		_permission: {
+			delete: boolean;
+			update: boolean;
+			info: boolean;
+			page: boolean;
+			list: boolean;
+			add: boolean;
+		};
+		/**
+		 * 请求
+		 */
+		request: Service["request"];
+	}
+
+	interface FormForm5 {
+		/**
+		 * 删除
+		 */
+		delete(data?: any): Promise<any>;
+		/**
+		 * 修改
+		 */
+		update(data?: any): Promise<any>;
+		/**
+		 * 单个信息
+		 */
+		info(data?: any): Promise<Form5Entity>;
+		/**
+		 * 分页查询
+		 */
+		page(data?: any): Promise<{
+			pagination: { size: number; page: number; total: number };
+			list: Form5Entity[];
+			[key: string]: any;
+		}>;
+		/**
+		 * 列表查询
+		 */
+		list(data?: any): Promise<Form5Entity[]>;
+		/**
+		 * 新增
+		 */
+		add(data?: any): Promise<any>;
+		/**
+		 * 权限标识
+		 */
+		permission: {
+			delete: string;
+			update: string;
+			info: string;
+			page: string;
+			list: string;
+			add: string;
+		};
+		/**
+		 * 权限状态
+		 */
+		_permission: {
+			delete: boolean;
+			update: boolean;
+			info: boolean;
+			page: boolean;
+			list: boolean;
+			add: boolean;
+		};
+		/**
+		 * 请求
+		 */
+		request: Service["request"];
+	}
+
 	type Service = {
 		request(options: {
 			url: string;
@@ -1727,5 +2331,12 @@ declare namespace Eps {
 		log: { log: LogLog };
 		space: { info: SpaceInfo; type: SpaceType };
 		task: { info: TaskInfo };
+		form: {
+			form1: FormForm1;
+			form2: FormForm2;
+			form3: FormForm3;
+			form4: FormForm4;
+			form5: FormForm5;
+		};
 	};
 }
