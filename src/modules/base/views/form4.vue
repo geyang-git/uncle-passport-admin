@@ -97,8 +97,16 @@ const Table = useTable({
 		{ label: "工作部门", prop: "department" },
 		{ label: "职位", prop: "position" },
 		{ label: "您希望我们如何联系", prop: "contact" },
-		{ label: "问题或意见", prop: "message" },
-		{ label: "状态", prop: "status", component: { name: "cl-switch" } },
+		{ label: "问题或意见", prop: "message", showOverflowTooltip: true },
+		{
+			label: "状态",
+			prop: "status",
+			dict: [
+				{ label: "未处理", value: 0 },
+				{ label: "正在处理", value: 1, color: "#67C23A" },
+				{ label: "已处理", value: 2, color: "#E6A23C" }
+			]
+		},
 		{ label: "备注", prop: "remark", showOverflowTooltip: true },
 		{ label: "创建时间", prop: "createTime" },
 		{ label: "更新时间", prop: "updateTime" },

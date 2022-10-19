@@ -64,20 +64,20 @@ const Upsert = useUpsert({
 			value: 0,
 			required: true
 		},
-    {
-      label: "如何联系",
-      prop: "contact",
-      component: {
-        name: "el-radio-group",
-        options: [
-          { label: "电话", value: 0 },
-          { label: "邮件", value: 1, color: "#67C23A" },
-          { label: "传真", value: 2, color: "#E6A23C" }
-        ]
-      },
-      value: 0,
-      required: true
-    },
+		{
+			label: "如何联系",
+			prop: "contact",
+			component: {
+				name: "el-radio-group",
+				options: [
+					{ label: "电话", value: 0 },
+					{ label: "邮件", value: 1, color: "#67C23A" },
+					{ label: "传真", value: 2, color: "#E6A23C" }
+				]
+			},
+			value: 0,
+			required: true
+		},
 		{
 			label: "您是如何知道我们的",
 			prop: "know",

@@ -235,7 +235,7 @@ const Table = useTable({
 				{ label: "顾问推荐", value: 2, color: "#E6A23C" }
 			]
 		},
-		{ label: "问题或意见", prop: "message" },
+		{ label: "问题或意见", prop: "message", showOverflowTooltip: true },
 		{
 			label: "状态",
 			prop: "status",
