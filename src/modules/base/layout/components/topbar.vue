@@ -20,7 +20,7 @@
 		<!-- 工具栏 -->
 		<ul class="app-topbar__tools">
 			<li>
-				<cl-chat />
+<!--				<cl-chat />-->
 			</li>
 
 			<li>
